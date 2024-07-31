@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+    <title>Cooking Classes and Tutorials</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f8f8f8;
+            padding: 1px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        nav{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: rgb(241, 199, 147);
+        height: 80px;
+        text-decoration: none;
+           
+        }
+        .ul2{
+        margin-top: 5px;
+        }
+        nav ul {
+            display: flex;
+            font-size: 18px;
+
+        }
+        nav ul li{
+            margin-right: 50px;
+            list-style: none;
+            
+        }
+        nav ul li a{
+            color: black;
+            text-decoration: none;
+        }
+        nav img{
+            height: 150px;
+            width: 250px;
+        }
+        .ul1{
+            margin-left: -10px;
+        }
+        nav button{
+            height: 30px;
+            width: 120px;
+            background-color: black;
+            color: white;
+            border-radius: 20px;
+            margin-top: -10px;
+        }
+        .dropdown{
+            background-color: rgb(241, 199, 147);
+            width:  100px;
+            z-index: 1;
+            display: none;
+            position: absolute;
+        }
+        .dropdown a{
+            display: block;
+            padding-bottom: 10px;
+        }
+        .navitem:hover .dropdown{
+            display: block;
+        }
+        nav a:hover{
+            font-size: 20px;
+        }
+        nav ion-icon{
+            font-size: 25px;
+            cursor: pointer;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .section {
+            background: #fff;
+            margin: 20px 0;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 800px;
+        }
+        .section img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        .section h2 {
+            margin-top: 0;
+            font-size: 28px;
+        }
+        .section p {
+            margin: 10px 0;
+        }
+        .ebook-link, .qa-link {
+            color: #3498db;
+            text-decoration: none;
+        }
+        .ebook-link:hover, .qa-link:hover {
+            text-decoration: underline;
+        }
+        .form-container {
+            width: 100%;
+            max-width: 400px;
+            margin: 40px auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 2s ease;
+        }
+        .form-container:hover{
+            transform: scale(1.2);
+        }
+        .form-container h2 {
+            margin-bottom: 20px;
+        }
+        .form-container form {
+            display: flex;
+            flex-direction: column;
+        }
+        .form-container input[type="text"],
+        .form-container input[type="email"] {
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        .form-container input[type="submit"] {
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            background: #3498db;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .form-container input[type="submit"]:hover {
+            background: #2980b9;
+        }
+        .success-message {
+            color: green;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+.icon-container {
+    text-align: center;
+    margin-top: 0px;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 300px;
+    text-align: center;
+    position: relative;
+}
+
+.close {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+    </style>
+</head>
+<body>
+    <nav>
+        <ul class="ul1">
+            <li><a href="index.html">Home</a></li>
+            <li class="navitem"><a href="recipes.html">Recipies</a>
+                <div class="dropdown">
+                    <!-- <a href="">Recipies</a> -->
+                    <a href="cookclass.html">Tutorials</a>
+                    <a href="cookclass.html">live classes</a>
+                </div>
+            </li>
+            <li><a href="restaurant.html">Restaurants</a></li>
+        </ul>
+        <a href="index.html"><img src="images/logo.png" alt=""></a>
+        <ul class="ul2">
+            <li><a href="meal.html">Schedule</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="restaurant.html">Reviews</a></li>
+            <li><a href="plans.html"><button>Subscribe</button></a></li>
+            <div class="icon-container">
+              <li><ion-icon name="menu" id="triggerIcon"></ion-icon></li>
+          </div>
+        </ul>
+       
+    </nav>
+   <div id="modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <img src="../images/logo.png" alt="Modal Image" height="100px" width="100px">
+            <p> Name:XXXXXXX</p> <br>
+            <p> Mail:XXXXXXX</p>
+            <a href=""><button id="modalButton">logout</button></a>
+        </div>
+    </div>
+
+    <div class="form-container">
+        <h2>Sign Up for the Next Live Q&A Session</h2>
+        <form id="signupForm">
+            <input type="text" id="name" name="name" placeholder="Enter Your Name" required>
+            <input type="email" id="email" name="email" placeholder="Enter Your Email" required>
+            <input type="submit" value="Sign Up">
+        </form>
+        <div id="successMessage" class="success-message" style="display: none;">You are signed up successfully!</div>
+    </div>
+
+    <script>
+        document.getElementById('signupForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+
+            if (name && email) {
+                document.getElementById('successMessage').style.display = 'block';
+                document.getElementById('signupForm').reset();
+            }
+        });
+
+        document.getElementById('triggerIcon').addEventListener('click', function() {
+    document.getElementById('modal').style.display = 'block';
+});
+
+document.getElementById('closeModal').addEventListener('click', function() {
+    document.getElementById('modal').style.display = 'none';
+});
+
+document.getElementById('modalButton').addEventListener('click', function() {
+    alert('click ok if You Wanna logout!');
+    document.getElementById('modal').style.display = 'none';
+});
+
+window.addEventListener('click', function(event) {
+    if (event.target === document.getElementById('modal')) {
+        document.getElementById('modal').style.display = 'none';
+    }
+});
+    </script>
+
+</body>
+</html>

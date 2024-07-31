@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Profile - FlavorFiesta Community</title>
+    <link rel="stylesheet" href="userprofile.css" />
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <nav>
+      <ul class="ul1">
+          <li><a href="index.html">Home</a></li>
+          <li class="navitem"><a href="recipes.html">Recipies</a>
+              <div class="dropdown">
+                  <!-- <a href="">Recipies</a> -->
+                  <a href="cookclass.html">Tutorials</a>
+                  <a href="cookclass.html">live classes</a>
+              </div>
+          </li>
+          <li><a href="restaurant.html">Restaurants</a></li>
+      </ul>
+      <a href="index.html"><img src="images/logo.png" alt=""></a>
+      <ul class="ul2">
+          <li><a href="meal.html">Schedule</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="restaurant.html">Reviews</a></li>
+          <li><a href="plans.html"><button>Subscribe</button></a></li>
+          <div class="icon-container">
+            <li><ion-icon name="menu" id="triggerIcon"></ion-icon></li>
+        </div>
+      </ul>
+     
+  </nav>
+ 
+
+    <section id="profile">
+      <div class="profile-header">
+        <img src="userprofile/badge.jpg" alt="User Avatar" class="avatar" />
+        <h1>Jane Doe</h1>
+        <p>Food Enthusiast | Recipe Creator | Blogger</p>
+      </div>
+
+      <div class="profile-content">
+        <div class="bio">
+          <h2>About Me</h2>
+          <p>
+            Hello! I'm Jane, a passionate foodie who loves exploring new
+            cuisines and creating delicious recipes. Join me on my culinary
+            adventures!
+          </p>
+        </div>
+
+        <div class="recent-activity">
+          <h2>Recent Activity</h2>
+          <ul>
+            <li>Shared a recipe: <a href="#">Spicy Thai Noodles</a></li>
+            <li>Commented on <a href="#">John's Pasta Recipe</a></li>
+            <li>Joined the discussion on <a href="#">Best Baking Tips</a></li>
+          </ul>
+        </div>
+
+        <div class="favorite-recipes">
+          <h2>Favorite Recipes</h2>
+          <div class="recipe-list">
+            <div class="recipe">
+              <img src="userprofile/chocolate.jpeg" alt="Chocolate Cake" />
+              <h3><a href="#">Chocolate Cake</a></h3>
+            </div>
+            <div class="recipe">
+              <img
+                src="userprofile/OIP.jpeg"
+                alt="Grilled Chicken"
+                height="400px"
+              />
+              <h3><a href="#">Grilled Chicken</a></h3>
+            </div>
+            <div class="recipe">
+              <img
+                src="userprofile/30-Minute-Roasted-Vegetable-Tacos-with-Chimichurri-BIG-flavor-satisfying-HEALTHY-vegan-glutenfree-plantbased-tacos-chimichurri-cauliflower-minimalistbaker-recipe-6-683x1024.jpg"
+                alt="Vegetarian Tacos"
+              />
+              <h3><a href="#">Vegetarian Tacos</a></h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="connect">
+          <h2>Connect with Me</h2>
+          <p>Follow me on social media or send me a message!</p>
+          <ul class="social-icons">
+            <li>
+              <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- <footer>
+      <p>&copy; 2024 FlavorFiesta. All rights reserved.</p>
+    </footer> -->
+  </body>
+  <script>
+    
+document.getElementById('triggerIcon').addEventListener('click', function() {
+    document.getElementById('modal').style.display = 'block';
+});
+
+document.getElementById('closeModal').addEventListener('click', function() {
+    document.getElementById('modal').style.display = 'none';
+});
+
+document.getElementById('modalButton').addEventListener('click', function() {
+    alert('click ok if You Wanna logout!');
+    document.getElementById('modal').style.display = 'none';
+});
+
+window.addEventListener('click', function(event) {
+    if (event.target === document.getElementById('modal')) {
+        document.getElementById('modal').style.display = 'none';
+    }
+});
+  </script>
+</html>

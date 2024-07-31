@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grilled Salmon</title>
+    <link rel="stylesheet" href="recipes1.css">
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+</head>
+<body>
+
+    <nav>
+        <ul class="ul1">
+            <li><a href="index.html">Home</a></li>
+            <li class="navitem"><a href="recipes.html">Recipies</a>
+                <div class="dropdown">
+                    <!-- <a href="">Recipies</a> -->
+                    <a href="cookclass.html">Tutorials</a>
+                    <a href="cookclass.html">live classes</a>
+                </div>
+            </li>
+            <li><a href="restaurant.html">Restaurants</a></li>
+        </ul>
+        <a href="index.html"><img src="images/logo.png" alt=""></a>
+        <ul class="ul2">
+            <li><a href="meal.html">Schedule</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="restaurant.html">Reviews</a></li>
+            <li><a href="plans.html"><button>Subscribe</button></a></li>
+            <div class="icon-container">
+              <li><ion-icon name="menu" id="triggerIcon"></ion-icon></li>
+          </div>
+        </ul>
+       
+    </nav>
+      <div id="modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <img src="../images/logo.png" alt="Modal Image" height="100px" width="100px">
+            <p> Name:XXXXXXX</p> <br>
+            <p> Mail:XXXXXXX</p>
+            <a href="login.html"><button id="modalButton">logout</button></a>
+        </div>
+    </div>
+
+     <div class="a1-a2">
+        <div class="a1">
+        <h2>Grilled Salmon </h2><br>
+         <ul>
+            <li>1 ½ pounds salmon fillets</li>
+            
+             <li>lemon pepper to taste</li>  
+             <li> garlic powder to taste</li>
+             <li>salt to taste</li>
+             <li> ⅓ cup soy sauce</li>
+             <li>⅓ cup brown sugar</li>
+             <li> ⅓ cup water</li>
+             <li>¼ cup vegetable oil</li></li><br>
+     </ul>
+        <h3>Information:</h3><br>
+        <ul>
+            <li>Gather all ingredients.</li>
+            <li>Season salmon fillets with lemon pepper, garlic powder, and salt.</li>
+            <li>Stir soy sauce, brown sugar, water, and vegetable oil together in a small bowl until sugar is dissolved.<br>
+                 Place fish in a large resealable plastic bag; add soy sauce mixture, seal, and turn to coat.<br>
+                Refrigerate for at least 2 hours .</li>
+            <li>Preheat an outdoor grill for medium heat and lightly oil the grate.</li>
+            <li>Season with salt and garnish with coriander leaves.</li>
+            <li>Serve and enjoy!.</li>
+        </ul>
+        </div>
+        <div class="a2">
+        <img src="recipes1.images/Grilled Salmon1.jpg">
+     </div>
+     </div>
+     <script>
+        
+document.getElementById('triggerIcon').addEventListener('click', function() {
+    document.getElementById('modal').style.display = 'block';
+});
+
+document.getElementById('closeModal').addEventListener('click', function() {
+    document.getElementById('modal').style.display = 'none';
+});
+
+document.getElementById('modalButton').addEventListener('click', function() {
+    alert('click ok if You Wanna logout!');
+    document.getElementById('modal').style.display = 'none';
+});
+
+window.addEventListener('click', function(event) {
+    if (event.target === document.getElementById('modal')) {
+        document.getElementById('modal').style.display = 'none';
+    }
+});
+     </script></body>

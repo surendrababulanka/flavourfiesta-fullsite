@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutritional&Diet</title>
+    <link rel="stylesheet" href="nutritional.css">
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+</head>
+<body>
+    <nav>
+        <ul class="ul1">
+            <li><a href="index.html">Home</a></li>
+            <li class="navitem"><a href="recipes.html">Recipies</a>
+                <div class="dropdown">
+                    <!-- <a href="">Recipies</a> -->
+                    <a href="cookclass.html">Tutorials</a>
+                    <a href="cookclass.html">live classes</a>
+                </div>
+            </li>
+            <li><a href="restaurant.html">Restaurants</a></li>
+        </ul>
+        <a href="index.html"><img src="images/logo.png" alt=""></a>
+        <ul class="ul2">
+            <li><a href="meal.html">Schedule</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="restaurant.html">Reviews</a></li>
+            <li><a href="plans.html"><button>Subscribe</button></a></li>
+            <div class="icon-container">
+              <li><ion-icon name="menu" id="triggerIcon"></ion-icon></li>
+          </div>
+        </ul>
+       
+    </nav>
+    <div id="modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <img src="../images/logo.png" alt="Modal Image" height="100px" width="100px">
+            <p> Name:XXXXXXX</p> <br>
+            <p> Mail:XXXXXXX</p>
+            <a href="login.html"><button id="modalButton">logout</button></a>
+        </div>
+    </div>
+   
+    <header>
+        <h1>Nutritional&Diet</h1>
+    </header>
+   
+    <div class="B1-B2">
+        <div class="B1">
+        <h2>Fresh Salad</h2>
+        <p>A delicious and nutritious fresh salad.</p>
+        <ul>
+            <li><strong>Rich in Vitamins and Minerals:</strong> Vitamin A, C, K, Folate (B9), Potassium.</li>
+            <li><strong>Low in Calories:</strong> Excellent for weight management.</li>
+            <li><strong>High in Fiber:</strong> Aids digestion and reduces the risk of chronic diseases.</li>
+            <li><strong>Hydrating:</strong> High water content from ingredients like cucumbers and lettuce.</li>
+            <li><strong>Antioxidants:</strong> Protects from oxidative stress and inflammation.</li>
+        </ul>
+
+        <h3>Information:</h3>
+        <ol>
+                <li><strong>Calories:</strong> 15-30</li>
+                <li><strong>Vitamin A:</strong> 2000-2500 IU</li>
+                <li><strong>Vitamin C:</strong> 10-15 mg</li>
+                <li><strong>Vitamin K:</strong> 60-80 mcg</li>
+                <li><strong>Folate:</strong> 50-60 mcg</li>
+                <li><strong>Potassium:</strong> 200-300 mg</li>
+                <li><strong>Fiber:</strong> 1-2 grams</li>
+        </ol>
+
+        </div>
+        <div class="B2">
+        <img src="nutritional.images/2img.jpg">
+     </div>
+     </div>
+    
+     <div class="c1-c2">
+        <div class="c1">
+        <h2>Fruit Smoothie</h2>
+        <p>A refreshing and healthy fruit smoothie.</p>
+        <ul>
+            <li>Oranges and strawberries provide vitamin C, which boosts the immune system and aids in skin health.</li>
+            <li>Spinach and kale offer vitamins K and A, which support bone health and vision.</li>
+            <li>Bananas are high in vitamin B6, which supports brain function and mood regulation.</li>
+            <li>Avocados provide vitamin E, which acts as an antioxidant to protect cells from damage.</li>
+        </ul>
+        <h3>Information:</h3>
+        <ol>
+                <li><strong>Calories:</strong> 11-20</li>
+                <li><strong>Vitamin A:</strong> 2000-2700 IU</li>
+                <li><strong>Vitamin C:</strong> 06-15 mg</li>
+                <li><strong>Vitamin K:</strong> 60-80 mcg</li>
+                <li><strong>Folate:</strong> 30-60 mcg</li>
+                <li><strong>Potassium:</strong> 100-300 mg</li>
+                <li><strong>Fiber:</strong> 0-4 grams</li>
+        </ol>
+        </div>
+        <div class="c2">
+        <img src="nutritional.images/3img.jpg">
+     </div>
+     </div>
+     <div class="D1-D2">
+        <div class="D1">
+            <h2>Quinoa Bowl</h2>
+            <p>A nutritious and hearty quinoa bowl.</p>
+            <ul>
+                <li>B vitamins (B6, B12, and folate) help with energy production and red blood cell formation.</li>
+                <li>Vitamin E acts as an antioxidant, supporting skin health and protecting cells.</li>
+                <li> Quinoa is a good source of several vitamins, including</li>
+                <li> About 220 calories per cup of cooked quinoa. It's also high in protein and fiber</li>
+                <li>making it a filling and nutritious option for meals.</li>
+                <h3>Information:</h3>
+                <ol>
+                        <li><strong>Calories:</strong> 08-20</li>
+                        <li><strong>Vitamin A:</strong> 2800-3700 IU</li>
+                        <li><strong>Vitamin C:</strong> 09-15 mg</li>
+                        <li><strong>Vitamin K:</strong> 60-80 mcg</li>
+                        <li><strong>Folate:</strong> 30-70 mcg</li>
+                        <li><strong>Potassium:</strong> 160-300 mg</li>
+                        <li><strong>Fiber:</strong> 0-8 grams</li>
+                </ol>
+            
+        </div>
+        <div class="D2">
+        <img src="nutritional.images/4img.jpg">
+     </div>
+     </div>
+     <script>
+        
+document.getElementById('triggerIcon').addEventListener('click', function() {
+    document.getElementById('modal').style.display = 'block';
+});
+
+document.getElementById('closeModal').addEventListener('click', function() {
+    document.getElementById('modal').style.display = 'none';
+});
+
+document.getElementById('modalButton').addEventListener('click', function() {
+    alert('click ok if You Wanna logout!');
+    document.getElementById('modal').style.display = 'none';
+});
+
+window.addEventListener('click', function(event) {
+    if (event.target === document.getElementById('modal')) {
+        document.getElementById('modal').style.display = 'none';
+    }
+});
+     </script>
+</body>
+</html>

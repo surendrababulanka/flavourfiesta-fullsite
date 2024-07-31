@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy and Security</title>
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            color: #541cec;
+        }
+        h1 {
+            text-align: center;
+        }
+        .section {
+            margin: 20px 0;
+        }
+        .section p {
+            margin: 10px 0;
+        }
+        .section h2 {
+            margin-top: 20px;
+        }
+        li strong{
+            color: rgb(243, 22, 14);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul class="ul1">
+            <li><a href="index.html">Home</a></li>
+            <li class="navitem"><a href="recipes.html">Recipies</a>
+                <div class="dropdown">
+                    <!-- <a href="">Recipies</a> -->
+                    <a href="cookclass.html">Tutorials</a>
+                    <a href="cookclass.html">live classes</a>
+                </div>
+            </li>
+            <li><a href="restaurant.html">Restaurants</a></li>
+        </ul>
+        <a href="index.html"><img src="images/logo.png" alt=""></a>
+        <ul class="ul2">
+            <li><a href="meal.html">Schedule</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="restaurant.html">Reviews</a></li>
+            <li><a href="plans.html"><button>Subscribe</button></a></li>
+            <div class="icon-container">
+              <li><ion-icon name="menu" id="triggerIcon"></ion-icon></li>
+          </div>
+        </ul>
+       
+    </nav>
+    <div id="modal" class="modal hidden">
+      <div class="modal-content">
+          <span class="close" id="closeModal">&times;</span>
+          <img src="../images/logo.png" alt="Modal Image" height="100px" width="100px">
+          <p> Name:XXXXXXX</p> <br>
+          <p> Mail:XXXXXXX</p>
+          <a href="login.html"><button id="modalButton">logout</button></a>
+      </div>
+  </div>
+    <div class="container">
+        <h1>Privacy and Security</h1>
+
+        <div class="section">
+            <h2>Data Protection</h2>
+            <p>We are committed to safeguarding the personal information of our users. Our data protection measures include:</p>
+            <ul>
+                <li><strong>Encryption:</strong> All sensitive data is encrypted in transit and at rest using industry-standard protocols.</li>
+                <li><strong>Access Control:</strong> We implement strict access controls to ensure that only authorized personnel can access user data.</li>
+                <li><strong>Regular Audits:</strong> We conduct regular security audits and vulnerability assessments to identify and address potential risks.</li>
+                <li><strong>Data Minimization:</strong> We collect only the data that is necessary for providing our services and retain it only as long as necessary.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>User Control</h2>
+            <p>We believe in giving users full control over their personal information. Our platform provides the following features:</p>
+            <ul>
+                <li><strong>Privacy Settings:</strong> Users can customize their privacy settings to control what information is shared and with whom.</li>
+                <li><strong>Data Access:</strong> Users can access and review the data we hold about them, including personal details and usage history.</li>
+                <li><strong>Data Portability:</strong> We offer tools for users to download their data in a structured, commonly used format.</li>
+                <li><strong>Data Deletion:</strong> Users can request the deletion of their personal data from our systems at any time, subject to legal and contractual obligations.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Compliance</h2>
+            <p>We adhere to the highest standards of data protection and comply with relevant regulations, including:</p>
+            <ul>
+                <li><strong>GDPR:</strong> We comply with the General Data Protection Regulation (GDPR) in the European Union, which includes ensuring lawful processing of personal data, providing clear and transparent privacy notices, and upholding data subjects' rights.</li>
+                <li><strong>CCPA:</strong> We adhere to the California Consumer Privacy Act (CCPA) regulations, offering California residents additional rights and protections regarding their personal information.</li>
+                <li><strong>Industry Standards:</strong> Our data protection practices align with industry standards, including ISO 27001 and SOC 2 compliance for information security management.</li>
+                <li><strong>Privacy by Design:</strong> We incorporate privacy considerations into the design and development of our products and services to protect user data from the outset.</li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        document.getElementById('triggerIcon').addEventListener('click', function() {
+    document.getElementById('modal').style.display = 'block';
+});
+
+document.getElementById('closeModal').addEventListener('click', function() {
+    document.getElementById('modal').style.display = 'none';
+});
+
+document.getElementById('modalButton').addEventListener('click', function() {
+    alert('click ok if You Wanna logout!');
+    document.getElementById('modal').style.display = 'none';
+});
+
+window.addEventListener('click', function(event) {
+    if (event.target === document.getElementById('modal')) {
+        document.getElementById('modal').style.display = 'none';
+    }
+});
+    </script>
+</body>
+</html>

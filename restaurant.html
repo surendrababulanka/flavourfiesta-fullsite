@@ -1,0 +1,1462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Reviews</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+*{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+        }
+        nav{
+            display: flex;
+           justify-content: space-evenly;
+           align-items: center;
+           background-color: rgb(241, 199, 147);
+           height: 80px;
+           
+        }
+        nav ul {
+            display: flex;
+            font-size: 18px;
+
+        }
+        nav ul li{
+            margin-left: 50px;
+            list-style: none;
+            
+        }
+        nav ul li a{
+            color: black;
+        }
+        nav img{
+            height: 150px;
+            width: 250px;
+        }
+        .ul1{
+            margin-left: -20px;
+        }
+        .ul2{
+          margin-top: 5px;
+        }
+        nav button{
+            height: 30px;
+            width: 120px;
+            background-color: black;
+            color: white;
+            border-radius: 20px;
+            margin-top: -10px;
+        }
+        .dropdown{
+            background-color: rgb(241, 199, 147);
+            width:  100px;
+            z-index: 1;
+            display: none;
+            position: absolute;
+        }
+        .dropdown a{
+            display: block;
+            padding-bottom: 10px;
+        }
+        .navitem:hover .dropdown{
+            display: block;
+        }
+        nav a:hover{
+            font-size: 20px;
+        }
+        nav ion-icon{
+            font-size: 25px;
+        }
+
+.container {
+    width: 60%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 100px;
+}
+
+.Restaurant-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.Restaurant-item {
+    display: flex;
+    background-color: #fafafa;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.Restaurant-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+.Restaurant-item img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-right: 1px solid #ddd;
+    transition: transform 0.3s ease;
+}
+
+.Restaurant-info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.Restaurant-info h2 {
+    margin: 0 0 10px 0;
+    font-size: 24px;
+}
+
+.Restaurant-info p {
+    margin: 5px 0;
+    color: #555;
+}
+
+.Restaurant-info .review {
+    margin-top: 10px;
+    font-style: italic;
+    color: #333;
+}
+.container h1{
+    background: linear-gradient(to left, violet,indigo,blue,green,yellow,orange,red);
+    background-clip: text;
+    display: inline;
+    color: transparent;
+    animation: animated 5s linear infinite;
+  }
+  @keyframes animated{
+    to{
+        background-position-x: 161px;
+    }
+  }
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.review-form, .reviews {
+    background-color: bisque;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 70%;
+    margin-left: 120px;
+
+}
+
+.review-form h2, .reviews h2 {
+    margin-top: 0;
+    color: blue;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input[type="text"], textarea, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+.review {
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+}
+
+.review:last-child {
+    border-bottom: none;
+}
+
+.review h3 {
+    margin: 0;
+}
+
+.review p {
+    margin: 5px 0;
+}
+
+.rating {
+    color: #f39c12;
+}
+.app h1{
+    font-size: 40px;
+    background: linear-gradient(to left,rgb(64, 207, 64),rgb(58, 71, 189),rgb(199, 50, 132),red);
+    background-clip: text;
+    display: inline;
+    color: transparent;
+    margin-left: 120px;
+  
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.heading {
+    font-size: 40px;
+    font-weight: 800;
+    margin: 60px auto;
+}
+.cateogaries {
+    display: flex;
+    flex-wrap: wrap;
+}
+.ctitle:active {
+    background-color: rgba(255, 0, 0, 0.9);
+}
+.cateogaries .ctitle {
+    margin: 10px;
+    border: 2px solid red;
+    padding: 10px 25px;
+    border-radius: 8px;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    justify-content: center;
+    margin: 20px;
+}
+.items {
+    width: 200px;
+    height: 300px;
+    display: flex;
+    border: 2px solid red;
+    padding: 4px;
+    border-radius: 10px;
+    margin: 20px;
+    flex-direction: column;
+}
+.img {
+    width: 175px;
+    height: 200px;
+}
+.title {
+    font-size: 20px;
+}
+.cateogary {
+    text-align: center;
+    margin: 10px 0px;
+}
+.details {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.items:hover {
+    background-color: red;
+    color: white;
+    transition-duration: 0.7s;
+    box-shadow: 8px 8px 10px rgba(255, 0, 0, 0.4);
+    transform: translate(-8px, -8px);
+}
+.items:hover .img {
+    transform: scale(1.2);
+    transition-duration: 1s;
+}
+.img-conatiner {
+    height: 200px;
+    width: 200px;
+    overflow: hidden;
+}
+.cateogaries .ctitle:hover {
+    transform: translate(3px, -5px);
+    transition-duration: 0.7s;
+    box-shadow: 5px 5px 10px rgba(255, 0, 0, 0.5);
+}
+ .happy{
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background: #e08b35;
+    color: #fff;
+    text-align: center;
+    font-size: 20px;
+}
+.sad{
+   
+    font-size: 30px;
+}
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+header nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+main {
+    padding: 20px;
+    margin-left: 20px;
+}
+main section {
+    margin-bottom: 20px;
+}
+main section h2 {
+    color: #333;
+}
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+    bottom: 0;
+    width: 100%;
+}
+form label {
+    display: block;
+    margin-top: 10px;
+}
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+}
+form button {
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+#articles h2{
+    margin-left: 50px;
+}
+ .a5 h3{
+    font-size: 40px;
+    margin-left: 50px;
+ }
+
+.artical_img_1{
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    color: white;
+    margin-right: 50px;
+    margin-left: 50px;
+}
+.artical_img_1 img{
+    height: 300px;
+}
+.artical_img_1 p{
+    margin-left: 80px;
+    margin-top: 30px;
+    line-height: 30px;
+    font-size: 24px;
+    font-weight: 500px;
+    text-decoration: underline;
+    display: flex;
+    align-items: center;
+}
+.artical_img_2{
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    color: white;
+    margin-right: 50px;
+    margin-left: 50px;
+}
+.artical_img_2 img{
+    height: 250px;
+}
+.artical_img_2 p{
+    margin-right: 80px;
+    margin-top: 30px;
+    line-height: 30px;
+    font-size: 24px;
+    font-weight: 500px;
+    text-decoration: underline;
+    display: flex;
+    align-items: center;
+}
+.artical_img_3{
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    color: white;
+    margin-right: 50px;
+    margin-left: 50px;
+}
+.artical_img_3 img{
+    height: 250px;
+}
+.artical_img_3 p{
+    margin-left: 80px;
+    margin-top: 30px;
+    line-height: 30px;
+    font-size: 24px;
+    font-weight: 500px;
+    text-decoration: underline;
+    display: flex;
+    align-items: center;
+}
+
+        .a1{
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333333;
+        }
+        .restaurant-list {
+            list-style: none;
+            padding: 0;
+        }
+        .restaurant-item {
+            padding: 15px;
+            border-bottom: 1px solid #dddddd;
+        }
+        .restaurant-item:last-child {
+            border-bottom: none;
+        }
+        .restaurant-name {
+            font-size: 1.2em;
+            color: #007bff;
+        }
+        .restaurant-location {
+            color: #666666;
+        }
+        form{
+            width: 500px;
+        }
+        .container{
+            margin-right: 340px;
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300&family=Open+Sans&family=Roboto:wght@300&display=swap');
+
+
+
+.image-hover-container {
+	position: relative;
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	.container {
+		position: relative;
+		height: 430px;
+		width: 310px;
+		margin: auto;
+		display: -webkit-box;
+		&:hover {
+			> .bottom-right {
+				top: 55%;
+				left: 80%;
+				box-shadow: 0px 37px 29px rgba(0, 0, 0, 0.3);
+				width: 350px;			
+			}
+			> .middle {
+				height: 90%;
+				left: 5%;
+				top: 5%;
+				width: 90%;
+				box-shadow: 0px 23px 33px rgba(0, 0, 0, 0.34);
+				.overlay {
+					opacity: 1;
+					z-index: 1;
+
+					p:nth-child(1) {
+						padding-top: 0;
+					}
+				}
+			}
+			> .top-left {
+				left: -70px;
+				top: -90px;
+				width: 150px;
+				box-shadow: 0px 37px 29px rgba(0, 0, 0, 0.3);
+			}
+			> .top-right {
+				 left: 250px;
+				 top: -90px;
+				 width: 260px;
+				 height: 280px;
+				box-shadow: 0px 37px 29px rgba(0, 0, 0, 0.3);
+			}
+			> .bottom-left {
+				left: -89%;
+				top: 65%;
+				width: 360px;
+				box-shadow: 0px 37px 29px rgba(0, 0, 0, 0.3);
+			}
+		
+		}
+		.lake-district {
+			background: url(images/food22.jpg) no-repeat;
+		}
+		.bg-image {
+			background-size: cover;
+			background-attachment: fixed;
+			background-position: 10% 10%; 
+		}
+		.middle {
+			transition: 500ms all;
+			 transition-delay: 0.25s;
+			transition-timing-function: cubic-bezier(.17,.67,.33,.97);
+			position: relative; 
+			margin: auto;
+			height: 100%;
+			width: 100%;
+			
+			margin: 0px;
+			left: 0;
+			top: 0;
+			box-shadow: 0px 17px 23px rgba(0, 0, 0, 0.34);
+			.bg-image {
+				height: 100%;
+				width: 100%;	
+			}
+			.overlay {
+				position: absolute;
+				top: 0;
+				left: 0;
+				height: 100%;
+				width: 100%;
+				z-index: 9;
+				background: rgba(67, 27, 12, 0.75);
+				display: flex;
+				flex-direction: column;
+				transition: 300ms all;
+			 transition-delay: 0.37s;
+				opacity: 0;
+				text-decoration: none;
+				z-index: -1;
+				p {
+					position: relative;
+					margin: auto;
+					color: #fff;
+					text-transform: uppercase;
+					font-family: 'Roboto', sans-serif;
+					font-size: 1.1em;
+					opacity: 0.8;
+					&:nth-child(1) {
+						margin-bottom: 4px !important;
+						padding-top: 30px;
+						transition: all 400ms;
+						transition-delay: 0.3s;
+					}
+					&:nth-child(2) {
+						margin-top: 4px !important;
+					}
+					
+				}
+				.mobile-link {
+					display: none;
+				}
+			}
+		}
+		.bottom-right {
+			transition: 800ms all;
+			transition-delay: 0.15s;
+			transition-timing-function: cubic-bezier(.17,.67,.33,.97);
+			position: absolute;
+			left: 0%;
+			top: 48%;
+			width: 100%;
+			box-shadow: 0px 37px 29px rgba(0, 0, 0, 0);
+			z-index: 1;
+			.bg-image {
+				height: 220px;
+				width: 100%;	
+			}
+		}
+		.bottom-left {
+			transition: 800ms all;
+			transition-delay: 0.17s;
+			transition-timing-function: cubic-bezier(.17,.67,.33,.97);
+			position: absolute;
+			left: 0%;
+			top: 48%;
+			width: 100%;
+			z-index: 1;
+			.bg-image {
+				height: 220px;
+				width: 100%;	
+			}
+		}
+		.top-left {
+			transition-timing-function: cubic-bezier(.17,.67,.33,.97);
+			transition: 600ms all;
+			transition-delay: 0.19s;
+			position: absolute;
+			left: 0%;
+			top: 0%;
+			width: 150px;
+			z-index: 1;
+			.bg-image {
+				height: 220px;
+				width: 100%;	
+			}
+				
+		}
+		.top-right {
+			transition: 500ms all;
+			transition-delay: 0.08s;
+			position: absolute;
+			left: 0%;
+			top: 0%;
+			width: 300px;
+			height: 260px;
+			z-index: 1;
+			transition-timing-function: cubic-bezier(.17,.67,.33,.97);
+			.bg-image {
+				 float: right;
+				 height: 100%;
+				 width: 100%;
+			}
+		}	
+	}
+}
+
+@media (max-width: 920px) {
+	.image-hover-container {
+		transform: scale(.8) translateX(0px);
+		overflow: hidden;
+		.overlay {
+			p:nth-child(1) {
+				 margin-top: 125px;
+			}
+			p:nth-child(2) {
+				margin-bottom: 30px !important;
+			}
+			.mobile-link {
+				display: block !important;
+				margin-top: 0px !important;
+			}
+		}
+		.bottom-right, .bottom-left, .top-left, .top-right {
+			box-shadow: 0px 0px 0px !important;
+		}
+		
+	}	
+}
+@media (max-width: 350px) {
+	.bottom-right, .bottom-left, .top-left, .top-right {
+		display: none !important;
+	}
+}
+.loading-container {
+	position: fixed;
+	height: 100vh;
+	width: 100%;
+	left: 0;
+	top: 0;
+	background: #fff;
+	transition: 600ms all;
+	#loading {
+	  margin: 0 auto;
+	  width: 70px;
+	  height: 70px;
+		background: rgba(67, 27, 12, 0.75);
+	  border-radius: 50%;
+	  animation: boing .8s linear infinite;
+	  position: relative;
+	  top: calc(50% - 35px);
+	  &:before {
+		 content: '';
+		 position: absolute;
+		 left: calc(50% - 30px);
+		 top: calc(50% - 30px);
+		 display: block;
+		 width: 60px;
+		 height: 60px;
+		 border-radius: 50%;
+		background: rgba(255, 255, 255, 1);
+		  animation: boing-inner .8s linear infinite;
+	  }
+	}
+	@keyframes boing {
+	  0% { transform: scale(1); }
+	  25% { transform: scale(.75); }
+	  100% { transform: scale(1); }
+	}
+	@keyframes boing-inner {
+	  0% { transform: scale(1); }
+	  25% { transform: scale(.6); }
+	  100% { transform: scale(1); }
+	}
+}
+.a9{
+    text-align: center;
+}
+.a11{
+    font-size: 40px;
+    background: linear-gradient(to left,rgb(64, 207, 64),rgb(58, 71, 189),rgb(199, 50, 132),red);
+    background-clip: text;
+    color: transparent;
+    margin-left: 120px;
+    margin-top: 30px;
+}
+.c10{
+    margin-top: 100px;
+}
+.c10 p{
+    margin-top: 200px;
+}
+.c10 h3{
+    margin-top: 100px;
+}
+.d11{
+    margin-left: 100px;
+    margin-bottom:100px;
+    padding: 10px;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.article {
+    background: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.article h3 {
+    margin-top: 0;
+}
+
+button {
+    background-color: #007bff;
+    border: none;
+    padding: 10px 15px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+form {
+    background: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+textarea {
+    height: 100px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+#formMessage {
+    margin-top: 20px;
+    font-size: 16px;
+    color: green;
+}
+.icon-container {
+    text-align: center;
+    margin-top: 0px;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 300px;
+    text-align: center;
+    position: relative;
+}
+
+.close {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+
+
+</style>
+<body>
+    <nav>
+        <ul class="ul1">
+            <li><a href="index.html">Home</a></li>
+            <li class="navitem"><a href="recipes.html">Recipies</a>
+                <div class="dropdown">
+                    <!-- <a href="">Recipies</a> -->
+                    <a href="cookclass.html">Tutorials</a>
+                    <a href="cookclass.html">live classes</a>
+                </div>
+            </li>
+            <li><a href="restaurant.html">Restaurants</a></li>
+        </ul>
+        <a href="index.html"><img src="images/logo.png" alt=""></a>
+        <ul class="ul2">
+            <li><a href="meal.html">Schedule</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="restaurant.html">Reviews</a></li>
+            <li><a href="plans.html"><button>Subscribe</button></a></li>
+            <div class="icon-container">
+              <li><ion-icon name="menu" id="triggerIcon"></ion-icon></li>
+          </div>
+        </ul>
+       
+    </nav>
+    <div id="modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <img src="../images/logo.png" alt="Modal Image" height="100px" width="100px">
+            <p> Name:XXXXXXX</p> <br>
+            <p> Mail:XXXXXXX</p>
+            <a href="login.html"><button id="modalButton">logout</button></a>
+        </div>
+    </div>
+   <div class="container">
+        <h1>Restaurants</h1>
+        <div class="Restaurant-list">
+            <div class="Restaurant-item">
+                <img src="images/mehfil2.avif" alt="Restaurant 1">
+                <div class="Restaurant-info">
+                    <h2> Star Restaurant </h2>
+                    <p>Location: 123 Main St, City</p>
+                    <p>Rating: ⭐⭐⭐⭐ (4/5)</p>
+                    <p>Cuisine: Italian</p>
+                    <p class="review">"Great atmosphere and delicious pasta! Will visit again."</p>
+                </div>
+            </div>
+            <div class="Restaurant-item">
+                <img src="images/paradise2.unknown" alt="Restaurant 2">
+                <div class="Restaurant-info">
+                    <h2>Paradise Restaurant</h2>
+                    <p>Location: 456 Oak St, City</p>
+                    <p>Rating: ⭐⭐⭐⭐⭐ (5/5)</p>
+                    <p>Cuisine: Japanese</p>
+                    <p class="review">"Amazing sushi and excellent service. Highly recommend."</p>
+                </div>
+            </div>
+            <div class="Restaurant-item">
+                <img src="images/fabella1.unknown" alt="Restaurant 2">
+                <div class="Restaurant-info">
+                    <h2>Fabella Restaurant</h2>
+                    <p>Location: 456 Oak St, City</p>
+                    <p>Rating: ⭐⭐⭐⭐⭐ (5/5)</p>
+                    <p>Cuisine: Japanese</p>
+                    <p class="review">"Amazing sushi and excellent service. Highly recommend."</p>
+                </div>
+            </div>
+            <div class="Restaurant-item">
+                <img src="images/meridian.jpg" alt="Restaurant 2">
+                <div class="Restaurant-info">
+                    <h2>Meridian Restaurant</h2>
+                    <p>Location: 456 Oak St, City</p>
+                    <p>Rating: ⭐⭐⭐⭐⭐ (5/5)</p>
+                    <p>Cuisine: Japanese</p>
+                    <p class="review">"Amazing sushi and excellent service. Highly recommend."</p>
+                </div>
+            </div>
+            <div class="Restaurant-item">
+                <img src="images/arena1.jpg" alt="Restaurant 2">
+                <div class="Restaurant-info">
+                    <h2>Arena Restaurant</h2>
+                    <p>Location: 456 Oak St, City</p>
+                    <p>Rating: ⭐⭐⭐⭐⭐ (5/5)</p>
+                    <p>Cuisine: Japanese</p>
+                    <p class="review">"Amazing sushi and excellent service. Highly recommend."</p>
+                </div>
+            </div>
+            <div class="Restaurant-item">
+                <img src="images/swach.jpg" alt="Restaurant 2">
+                <div class="Restaurant-info">
+                    <h2> Restaurant</h2>
+                    <p>Location: 456 Oak St, City</p>
+                    <p>Rating: ⭐⭐⭐⭐⭐ (5/5)</p>
+                    <p>Cuisine: Japanese</p>
+                    <p class="review">"Amazing sushi and excellent service. Highly recommend."</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="review-form">
+        <h2>Post a Review</h2>
+        <form id="reviewForm">
+            <label for="RestaurantName">Restaurant Name:</label>
+            <input type="text" id="RestaurantName" name="RestaurantName" required>
+            <label for="review">Your Review:</label>
+            <textarea id="review" name="review" rows="4" required></textarea>
+            <label for="rating">Rating:</label>
+            <select id="rating" name="rating" required>
+                <option value="1">1 Star</option>
+                <option value="2">2 Stars</option>
+                <option value="3">3 Stars</option>
+                <option value="4">4 Stars</option>
+                <option value="5">5 Stars</option>
+            </select>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <div class="reviews">
+        <h2>Reviews</h2>
+        <div id="reviewsContainer"></div>
+    </div>
+    <div class="app">
+        <h1>Top-rated and Popular Restaurants</h1>
+    </div>
+    <div class="content">
+<div class="container">
+<div class="items">
+<div class="img-conatiner"><a href="https://www.nayaabgroup.com/RESTAURANT/"><img src="https://img.freepik.com/premium-photo/apartment-building-kyiv-ukraine_261932-4429.jpg?uid=R154086700&ga=GA1.2.1488050322.1715327710&semt=ais_user-customized"
+alt="Burger" class="img"></a></div>
+<div class="details">
+<div class="title">Hotel Nayaab</div>
+<div class="price"></div>
+</div>
+<div class="cateogary">Restaurant</div>
+</div>
+<div class="items">
+<div class="img-conatiner"><a href="https://thespicyvenue.co.in/"><img src="https://img.freepik.com/free-photo/photorealistic-wedding-venue-with-intricate-decor-ornaments_23-2151481522.jpg?uid=R154086700&ga=GA1.2.1488050322.1715327710&semt=ais_user-customized"
+alt="Burger" class="img"></a></div>
+<div class="details">
+<div class="title">Spicy Venue</div>
+<div class="price"></div>
+</div>
+<div class="cateogary">Restaurant</div>
+</div>
+</div>
+</div>
+<div class="content">
+    <div class="cateogaries">
+    </div>
+    <div class="container">
+    <div class="items">
+    <div class="img-conatiner"><a href="https://www.zomato.com/hyderabad/cafe-bahar-basheer-bagh/menu"><img src="https://img.freepik.com/premium-photo/sleek-modern-home-with-wrap-around-porch_1082068-82254.jpg?uid=R154086700&ga=GA1.2.1488050322.1715327710&semt=ais_user-customized"
+    alt="Burger" class="img"></a></div>
+    <div class="details">
+    <div class="title">Cafe Bahar</div>
+    <div class="price"></div>
+    </div>
+    <div class="cateogary">Restaurant</div>
+    </div>
+    <div class="items">
+    <div class="img-conatiner"><a href="https://order.paradisefoodcourt.in/welcome"><img src="https://img.freepik.com/premium-photo/industrial-loft-bar-style_147059-67.jpg?uid=R154086700&ga=GA1.2.1488050322.1715327710&semt=ais_user-customized"
+    alt="Burger" class="img"></a></div>
+    <div class="details">
+    <div class="title">Paradise</div>
+    <div class="price"></div>
+    </div>
+    <div class="cateogary">Restaurant</div>
+    </div>
+    </div>
+    </div>
+    <div class="content">
+        <div class="container">
+        <div class="items">
+        <div class="img-conatiner"><a href="https://hotelshadab.in/"><img src="https://img.freepik.com/premium-photo/floral-interior-modern-cafe-restaurant-with-plants-craft-pots-wall-baku-azerbaijan-12022022_267395-1681.jpg?uid=R154086700&ga=GA1.2.1488050322.1715327710&semt=ais_user-customized"
+        alt="Burger" class="img"></a></div>
+        <div class="details">
+        <div class="title">Hotel Shadab</div>
+        <div class="price"></div>
+        </div>
+        <div class="cateogary">Restaurant</div>
+        </div>
+        <div class="items">
+        <div class="img-conatiner"><a href="https://tajmahalhotel.co.in/"><img src="https://img.freepik.com/premium-photo/container-shop_951586-64866.jpg?uid=R154086700&ga=GA1.2.1488050322.1715327710&semt=ais_user-customized"
+        alt="Burger" class="img"></a></div>
+        <div class="details">
+        <div class="title">Taj Mahal Hotel</div>
+        <div class="price"></div>
+        </div>
+        <div class="cateogary">Restaurant</div>
+        </div>
+        </div>
+        </div>
+        
+<div class="happy">
+   <div class="sad">
+        
+        <nav>
+            <h4>Food Experiences</h4>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#articles">Articles</a></li>
+                <li><a href="#guides">Guides</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+    <main>
+        <section id="home">
+            <h2>Welcome to Food Experiences</h2>
+            <p>Your ultimate guide to dining out and enjoying culinary adventures.</p>
+        </section>
+        <div class="a9">
+        <img src="images/exp2.unknown" height="300px" width="400px">
+    </div>
+
+        <section id="articles">
+            <h2>Articles</h2>
+            <div class="artical_img_1">
+               
+                <p class="artical_text">
+                    Calcium-rich dairy matrix<br>
+                    protects better than minerals<br>
+                    calcium against colonic<br>
+                    luminal haem_induced<br>
+                    alterations in male rats <br>
+                </p>
+                <img src="images/artical_img_1.webp">
+            </div>
+            <div class="artical_img_2">
+               
+                <img src="images/artical_img_2.webp">
+
+                <p class="artical_text">
+                    This dish, which was served to<br>
+                     the soldiers of the Chera kings<br>
+                      in Kerala, was said to be<br>
+                       made of rice, ghee, meat, turmeric, <br>
+                       coriander, pepper, and bay leaf.
+                </p>
+            </div>
+            <div class="artical_img_3">
+                
+                <p class="artical_text">
+                    This mutton bone broth soup <br>
+                    has warm aromatic spices <br>
+                    like ginger, black peppercorn, <br>
+                    coriander, and curry leaves for <br>
+                    a nourishing and brothy soup.
+                </p>
+                <img src="images/artical_img_3.jpg">
+            </div>
+           <article>
+            <div class="a5">
+                
+            </div>
+    <title>Hyderabad Restaurants</title>
+    <div class="a11">
+    <h3>Hyderabad Restaurants</h3>
+</div>
+    <div class="a1">
+    <div class="container">
+        <ul class="restaurant-list">
+            <li class="restaurant-item">
+                <span class="restaurant-name">One Fine Day</span>
+                <div class="restaurant-location">Necklace Road, Secunderabad</div>
+            </li>
+            <li class="restaurant-item">
+                <span class="restaurant-name">7 Sisters - Road 12</span>
+                <div class="restaurant-location">Banjara Hills</div>
+            </li>
+            <li class="restaurant-item">
+                <span class="restaurant-name">Black Pearl Multi Cuisine Restaurant</span>
+                <div class="restaurant-location">Basheerbagh</div>
+            </li>
+            <li class="restaurant-item">
+                <span class="restaurant-name">Cream Shakes</span>
+                <div class="restaurant-location">SR Nagar</div>
+            </li>
+            <li class="restaurant-item">
+                <span class="restaurant-name">Oye Rock N Roll</span>
+                <div class="restaurant-location">Abids</div>
+            </li>
+            <li class="restaurant-item">
+                <span class="restaurant-name">Oye Pizza</span>
+                <div class="restaurant-location">Abids</div>
+            </li>
+            <li class="restaurant-item">
+                <span class="restaurant-name">Millies Cookies</span>
+                <div class="restaurant-location">GVK One Mall, Banjara Hills</div>
+            </li>
+            <li class="restaurant-item">
+                <span class="restaurant-name">Fly- Feel the High</span>
+                <div class="restaurant-location">Jubilee Hills</div>
+            </li>
+            <li class="restaurant-item">
+                <span class="restaurant-name">Oh Baby Cafe</span>
+                <div class="restaurant-location">PG Road, Secunderabad</div>
+            </li>
+            <li class="restaurant-item">
+                <span class="restaurant-name">Tipsy Stories - Rooftop Bar</span>
+                <div class="restaurant-location">Jubilee Hills</div>
+            </li>
+            <li class="restaurant-item">
+                <span class="restaurant-name">Kaloreez</span>
+                <div class="restaurant-location">Madhapur</div>
+            </li>
+            <li class="restaurant-item">
+                <span class="restaurant-name">Grill By The Pool</span>
+                <div class="restaurant-location">Aditya Enclave, Jubilee Hills</div>
+            </li>
+            <li class="restaurant-item">
+                <span class="restaurant-name">Nag Restaurant and Banquets</span>
+                <div class="restaurant-location">Alwal, Secunderabad</div>
+            </li>
+            <li class="restaurant-item">
+                <span class="restaurant-name">Hut-K Spice Kitchen</span>
+                <div class="restaurant-location">Madhapur</div>
+            </li>
+            <li class="restaurant-item">
+                <span class="restaurant-name">1989 Pizza & Thick Shakes</span>
+                <div class="restaurant-location">Dilsukh Nagar</div>
+            </li>
+            <li class="restaurant-item">
+                <span class="restaurant-name">Smaaash C2H5OH Bowling Sports Bar</span>
+                <div class="restaurant-location">Inorbit Mall, Madhapur</div>
+            </li>
+            <li class="restaurant-item">
+                <span class="restaurant-name">Pizzorio</span>
+                <div class="restaurant-location">Jubilee Hills</div>
+            </li>
+            <li class="restaurant-item">
+                <span class="restaurant-name">Raise The Bar</span>
+                <div class="restaurant-location">Gachibowli</div>
+            </li>
+            <li class="restaurant-item">
+                <span class="restaurant-name">Spice It</span>
+                <div class="restaurant-location">Ibis Hotel, Hitech City</div>
+            </li>
+            <li class="restaurant-item">
+                <span class="restaurant-name">Cheesiaano Pizza</span>
+                <div class="restaurant-location">Reddy Enclave, Kompally</div>
+            </li>
+        </ul>
+    </div>
+            </article>
+        </div>
+            <article>
+                <div class="d11">
+                <h3>Street Food Around the World</h3><br><br> 
+                <p>Explore the vibrant world of street food from different cultures.</p>
+            </div>
+                <body>
+                    <div style='opacity: 0;' id='imageHover'>
+                        <div class="image-hover-container">
+                            <div class='container'>
+                                <div class='middle'>
+                                    <div class='bg-image lake-district'></div>
+                                    <a href='https://www.cumbriatourism.org/'  target="_blank" class='overlay'>
+                                        <p>Food Experience</p>
+                                        <p class='mobile-link'>Read More</p>
+                                    </a>
+                                </div>
+                                <div class='bottom-right'>
+                                    <div class='bg-image lake-district'></div>
+                                </div>
+                                <div class='bottom-left'>
+                                    <div class='bg-image lake-district'></div>
+                                </div>
+                                <div class='top-left'>
+                                    <div class='bg-image lake-district'></div>
+                                </div>
+                                <div class='top-right'>
+                                    <div class='bg-image lake-district'></div>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                        </div>
+                        <!-- Loading Screen - Taken from Pulsing Balls by Renato Ribeiro -->
+                        <!-- https://codepen.io/renatorib/pen/JBdkH -->
+                        <div class='loading-container' id='loadingScreen'>
+                            <div id="loading"></div>  
+                        </div>
+            </article>
+        </section>
+       
+</div>
+<section id="home">
+    <h2>Welcome to Dining Guides</h2>
+    <p>Your go-to resource for the best dining experiences. Discover new places to eat, read reviews, and get tips on how to make the most of your dining adventures.</p>
+</section>
+<section id="guides">
+    <h2>Latest Articles</h2>
+    <div class="article" id="article1">
+        <h3>Top 10 Restaurants in New York</h3>
+        <p>Discover the best places to eat in the Big Apple. From fine dining to street food, this guide has it all.</p>
+        <button onclick="readMore('article1')">Read More</button>
+    </div>
+    <div class="article" id="article2">
+        <h3>Best Brunch Spots in Los Angeles</h3>
+        <p>Find out where to have the best brunch in LA. Whether you’re into traditional or trendy, we’ve got you covered.</p>
+        <button onclick="readMore('article2')">Read More</button>
+    </div>
+    <div class="article" id="article3">
+        <h3>Vegan Dining: Top Picks in San Francisco</h3>
+        <p>Explore the top vegan dining spots in San Francisco. From casual eateries to upscale restaurants, there’s something for everyone.</p>
+        <button onclick="readMore('article3')">Read More</button>
+    </div>
+</section>
+<section id="contact">
+    <h2>Contact Us</h2>
+    <form id="contactForm">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+    <div id="formMessage"></div>
+</section>
+</main>
+<footer>
+<p>&copy; 2024 Dining Guides. All rights reserved.</p>
+</footer>
+<script src="ss.js"></script>
+    <script>
+        document.getElementById('reviewForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const RestaurantName = document.getElementById('RestaurantName').value;
+    const reviewText = document.getElementById('review').value;
+    const rating = document.getElementById('rating').value;
+
+    const reviewContainer = document.createElement('div');
+    reviewContainer.classList.add('review');
+
+    const reviewHeader = document.createElement('h3');
+    reviewHeader.textContent = $`{RestaurantName}` - $`{'★'.repeat(rating)}`;
+
+    const reviewBody = document.createElement('p');
+    reviewBody.textContent = reviewText;
+
+    reviewContainer.appendChild(reviewHeader);
+    reviewContainer.appendChild(reviewBody);
+
+    document.getElementById('reviewsContainer').appendChild(reviewContainer);
+
+    document.getElementById('reviewForm').reset();
+});
+        document.addEventListener('DOMContentLoaded', () => {
+    const form = document.querySelector('form');
+    form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        alert('Thank you for your message!');
+    });
+});
+    </script>
+     <script>
+        window.addEventListener("load", function(){
+let hoverImagesContainer = document.getElementById('imageHover');
+let loadingScreen = document.getElementById('loadingScreen');
+loadingScreen.style.opacity = '0';
+loadingScreen.style.zIndex = '-1';
+hoverImagesContainer.style.opacity = '1';
+});
+function readMore(articleId) {
+    const article = document.getElementById(articleId);
+    const content = article.querySelector('p');
+
+    if (content.style.display === 'none') {
+        content.style.display = 'block';
+    } else {
+        content.style.display = 'none';
+    }
+}
+
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+    if (name && email && message) {
+        document.getElementById('formMessage').textContent = 'Thank you for your message!';
+        document.getElementById('contactForm').reset();
+    } else {
+        document.getElementById('formMessage').textContent = 'Please fill out all fields.';
+        document.getElementById('formMessage').style.color = 'red';
+    }
+});
+
+
+
+document.getElementById('triggerIcon').addEventListener('click', function() {
+    document.getElementById('modal').style.display = 'block';
+});
+
+document.getElementById('closeModal').addEventListener('click', function() {
+    document.getElementById('modal').style.display = 'none';
+});
+
+document.getElementById('modalButton').addEventListener('click', function() {
+    alert('click ok if You Wanna logout!');
+    document.getElementById('modal').style.display = 'none';
+});
+
+window.addEventListener('click', function(event) {
+    if (event.target === document.getElementById('modal')) {
+        document.getElementById('modal').style.display = 'none';
+    }
+});
+    </script>
+</body>
+</html>

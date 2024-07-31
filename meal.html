@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>meal palnner</title>
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+    <link rel="stylesheet" href="meal.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+</head>
+<body>
+  <nav>
+    <ul class="ul1">
+        <li><a href="index.html">Home</a></li>
+        <li class="navitem"><a href="recipes.html">Recipies</a>
+            <div class="dropdown">
+                <!-- <a href="">Recipies</a> -->
+                <a href="cookclass.html">Tutorials</a>
+                <a href="cookclass.html">live classes</a>
+            </div>
+        </li>
+        <li><a href="restaurant.html">Restaurants</a></li>
+    </ul>
+    <a href="index.html"><img src="images/logo.png" alt=""></a>
+    <ul class="ul2">
+        <li><a href="meal.html">Schedule</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="restaurant.html">Reviews</a></li>
+        <li><a href="plans.html"><button>Subscribe</button></a></li>
+        <div class="icon-container">
+          <li><ion-icon name="menu" id="triggerIcon"></ion-icon></li>
+      </div>
+    </ul>
+   
+</nav>
+
+<div id="modal" class="modal hidden">
+  <div class="modal-content">
+      <span class="close" id="closeModal">&times;</span>
+      <img src="../images/logo.png" alt="Modal Image" height="100px" width="100px">
+      <p> Name:XXXXXXX</p> <br>
+      <p> Mail:XXXXXXX</p>
+      <a href="login.html"><button id="modalButton">logout</button></a>
+  </div>
+</div>
+<header>
+        <h1>MEAL PLANNER</h1>
+    </header>
+    <section class="A">      
+    <h2>Meal Planner Template</h2>
+        <p>
+            Welcome to the Meal Planner! This page is designed to help you organise your meals, plan your shopping list, and keep track of your favourite recipes. Utilise this tool on your day-to-day journey towards eating healthier and staying organised.
+        </p>
+        <p>
+            If you enjoy our templates, please follow, share or suggest at <a href="#">Roam Studio</a>.
+        </p>
+    </section>
+    <section class="content">
+        <div class="sidebar">
+            <ul>
+                <li><a href="shopping.html">Shopping List</a></li>
+                <li><a href="nutritional.html"> Nutritional Information</a></li>
+                <li><a href="#">Weekly Meals</a></li>
+                <li><a href="#">Recipes</a></li>
+                <li><a href="#">My Recipe Ideas</a></li>
+            </ul>
+        </div>
+        <div class="main">
+            <h3>Shopping List</h3>
+            <ul class="shopping-list">
+                <li>Avocado</li>
+                <li>Basil</li>
+                <li>Lemon</li>
+                <li>Tomato</li>
+            </ul>
+        </div>
+    </section>
+
+     <div class="B1-B2">
+        <div class="B1">
+        <h2>MEAL PLANNING</h2>
+        <h1> 1. what exactly is meal palnning?</h1><br>
+        <ul>
+           <li>Look ahead over a managesble timeframe</li><br>
+           <li>Review calender work,family,personal life,holidays</li><br>
+           <li>plan/select repcipes and Weekly menu </li><br>
+           <li>Take steps to that plan happen!</li><br>
+        </ul>
+        </div>
+        <div class="B2">
+        <img src="meal.images/123 img.jpg">
+     </div>
+     </div>
+
+      <div class="C1-C2">
+        <h2>BENFITS OF MEAL PLANNING</h2><br>
+        <div class="C1">
+     <ul>
+          <li>Keeps you from making unhelthy choices</li>
+          <li>Keeps your weight management goals first</li>
+          <li>Controls your budget </li>
+          <li>Ensures variety of nutrients</li><br>
+        </ul>
+    </div>
+     <div class="C2">
+        <ul>
+          <li>Less time /effort to plan and prepare during the busy week</li>  
+          <li>Prevents wasted food/groceries</li>
+          <li>prevents mindless eating</li><br>
+        </ul>
+        </div>
+      </div>
+      
+        
+      <div class="slider-container">
+        <div class="slider" id="slider">
+          <div class="card">
+            <img src="meal.images/fruits 1.jpg" alt="Image 1">
+            <p>Fruits are an excellent source of essential vitamins and minerals, and they are high in fiber</p>
+        </div>
+          <div class="card">
+            <img src="meal.images/f img 2.jpg" alt="Image 2">
+            <p>Nuts and seeds are good sources of protein, healthy fats, fibres, vitamins and minerals.</p>
+        </div>
+          <div class="card">
+            <img src="meal.images/vegetables.jpg" alt="Image 3">
+            <p>Vegetables and fruit contain antioxidants and phytochemicals, or plant chemicals.</p>
+        </div>
+      </div>
+      </div>
+      <div class="slider-container2">
+      <h1>Non-veg</h1><br>
+      <div class="slider" id="slider">
+        <div class="card">
+          <img src="meal.images/3img.jpg" alt="Image 1">
+          <p>Biryani is a mixed rice dish, mainly popular in South Asia. It is made with rice, </p>
+      </div>
+        <div class="card">
+          <img src="meal.images/4img.jpg" alt="Image 2">
+          <p>Chicken Drumsticks with bone. Shop for farm fresh chicken Freshprotin and get it delivered .</p>
+      </div>
+        <div class="card">
+          <img src="meal.images/5img.jpg" alt="Image 3">
+          <p>Chicken curry recipe for beginners. Learn how to make the best with basic pantry staples.</p>
+      </div>
+      </div>
+    </div>
+
+    <div class="D">
+      <h1>Recipes</h1><br>
+      <p>A recipe developer is a member of the food service industry with extensive culinary arts knowledge and training<br>
+        They create new and inventive recipes to improve customer appeal and aid business success.</p>
+    </div>
+    
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+          <div class="swiper-slide">
+              <img src="meal.images/cake img.jpg" alt="Image 1">
+          </div>
+          <div class="swiper-slide">
+              <img src="meal.images/pizza 1.jpg" alt="Image 2">
+          </div>
+          <div class="swiper-slide">
+              <img src="meal.images/food3.jpg" alt="Image 3">
+          </div>
+          <div class="swiper-slide">
+            <img src="meal.images/food2.jpg" alt="Image 4">
+        </div>
+        <div class="swiper-slide">
+            <img src="meal.images/food img.jpg" alt="Image 5">
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+  </div>
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+      var swiper = new Swiper('.swiper-container', {
+          effect: 'coverflow',
+          grabCursor: true,
+          centeredSlides: true,
+          slidesPerView: 'auto',
+          coverflowEffect: {
+              rotate: 50,
+              stretch: 0,
+              depth: 100,
+              modifier: 1,
+              slideShadows: true,
+          },
+          pagination: {
+              el: '.swiper-pagination',
+          },
+          navigation: {
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+          },
+      });
+
+
+
+
+
+      
+document.getElementById('triggerIcon').addEventListener('click', function() {
+    document.getElementById('modal').style.display = 'block';
+});
+
+document.getElementById('closeModal').addEventListener('click', function() {
+    document.getElementById('modal').style.display = 'none';
+});
+
+document.getElementById('modalButton').addEventListener('click', function() {
+    alert('click ok if You Wanna logout!');
+    document.getElementById('modal').style.display = 'none';
+});
+
+window.addEventListener('click', function(event) {
+    if (event.target === document.getElementById('modal')) {
+        document.getElementById('modal').style.display = 'none';
+    }
+});
+  </script>
+
+    
+
+    
+   
+     
+      
+     
+      
+      
+
+    
+
+ 
+</body>
+</html>

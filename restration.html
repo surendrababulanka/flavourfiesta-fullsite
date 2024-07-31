@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.container2 {
+    max-width: 400px;
+    /* margin: 20px auto; */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.container2 a{
+    font-size: 20px;
+    margin-left: 150px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    padding: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #1b94da;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0d6090;
+}
+
+#message {
+    margin-top: 10px;
+    color: #4CAF50;
+    font-weight: bold;
+}
+.container1{
+    max-width: 400px;
+    /* margin: 20px auto; */
+    padding: 20px;
+    background-image: url(../images/raw.jpg);
+    border-radius: 8px;
+    background-size: cover;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.container1 h1{
+    font-size: 50px;
+    color: beige;
+}
+.container1 p{
+    margin-left: 90px;
+    font-size: 20px;
+    color: beige;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="container1">
+            <h1>Make the raw into Food</h1>
+            <p>For recipies Register Now</p>
+        </div>
+        <div class="container2">
+        <form id="registrationForm" action="login.html">
+            <h2>User Registration</h2>
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required placeholder="enter your name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required placeholder="enter your email id">
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required placeholder="Password">
+            </div>
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password:</label>
+                <input type="text" id="confirmPassword" name="confirmPassword" required placeholder="re-enter password ">
+            </div>
+            <button type="submit">Register</button>
+        </form>
+        <div id="message"></div>
+        <a href="login.html">Login</a>
+    </div></div>
+    <script>
+        document.getElementById("registrationForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    // Get form values
+    var username = document.getElementById("username").value;
+    var email = document.getElementById("email").value;
+    var password = document.getElementById("password").value;
+    var confirmPassword = document.getElementById("confirmPassword").value;
+
+    // Simple validation
+    if (password !== confirmPassword) {
+        setMessage("Passwords do not match", 'red');
+        return;
+    }
+
+    // If all validations pass, display success message
+    setMessage("Registration successful! Welcome " + username, 'green');
+    // You can also submit the form here if needed
+});
+
+function setMessage(message, color) {
+    var messageElement = document.getElementById("message");
+    messageElement.style.color = color;
+    messageElement.textContent = message;
+}
+    </script>
+</body>
+</html>
